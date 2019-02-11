@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap button</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- load jquery and bootstrap -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <style>
+        .header{
+            padding:10% 0 0;
+            margin: 0 35% 0 ;
+        }
+        .c{
+            display: hidden;
+        }
+    </style>
+    <script type="text/javascript">
+    function Masuk(){
+        var username=document.getElementById('username').value;
+        var password=document.getElementById('password').value;
+        if (username == "derik" && password == "123"){
+            var element = "";
+            element +="<br>";
+            element += "<div class='alert alert-success alert-dismssible'>";
+            element += "<span class='close' data-dismiss='alert'>&times;</span>";
+            element += "<h4>Login Berhasil</h4>";
+            element += "Anda Berhasil Login, selamaat....!";
+            element += "</div>";
+        }else{
+            var element = "";
+            
+            element += "<div class='alert alert-danger alert-dismssable'>";
+            element += "<span class='close' data-dismiss='alert'>&times;</span>"
+            element += "<h4>Login Gagal</h4>";
+            element += "Anda gagal Login, kasihaan....!"
+            element += "</div>"
+        }
+        document.getElementById('login-body').innerHTML += element;
+        document.getElementById('login-bod').innerHTML += element;
+    }
+    </script>
+</head>
+<body>
+    <div class="container header">
+        <div class="row ">
+            <div class="card col-sm-4 ">
+                <div class="card-header bg-info text-white text-center">
+                    <H4>Form Register</H4>
+                </div>
+                <div class="card-body " id="login-body">
+                    <label for="">Username   :</label>
+                    <div class="col-sm-12">
+                    <input type="text" id="username" class="form-control" placeholder="Username">
+                    </div>
+                    <label for="">Password    :</label>
+                    <div class="col-sm-12">
+                    <input type="password" id="password" class="form-control" placeholder="Password">
+                    </div>
+                    <br>   
+                </div>
+                <div class="card-footer">
+                    <button type="button" id="" class="btn btn-primary btn-block text-center" onclick="Masuk()">
+                        Masuk
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
